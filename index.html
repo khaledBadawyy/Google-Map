@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Google Map</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <input id="pac-input" class="controls" type="text" placeholder="Search.." />
+    <div id="map"></div>
+    <div id="coordinates">
+      <label for="lat-input">Latitude:</label>
+      <input id="lat-input" type="text" />
+      <label for="lng-input">Longitude:</label>
+      <input id="lng-input" type="text" />
+    </div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiHXEeByxxXnriRpYTxopcp0CL6vlCnwg&libraries=places"
+      async
+      defer
+      onload="initMap()"
+    ></script>
+  </body>
+</html>

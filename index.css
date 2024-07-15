@@ -1,0 +1,59 @@
+#map {
+  height: 100%;
+}
+
+/* 
+     * Optional: Makes the sample page fill the window. 
+     */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="text"] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  z-index: 1;
+  margin-top: 8px;
+}
+
+input[type="text"]:focus {
+  width: 89%;
+}
+#mySearch {
+  width: 99%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #1d0404;
+  border-radius: 5px;
+}
+#coordinates {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  background-color: opacity black;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+#coordinates label {
+  display: block;
+  margin: 5px 0;
+}
+
+#coordinates input {
+  width: 230px;
+  margin-bottom: 10px;
+}
