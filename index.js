@@ -8,7 +8,7 @@ class MapHandler {
     this.currentMarker = null;
     this.staticMarker = null;
     this.searchMarkers = [];
-    this.isStaticMarkerVisible = true; // Flag to control visibility of static marker
+    this.isStaticMarkerVisible = true;  
   }
 
   initMap() {
@@ -34,23 +34,23 @@ class MapHandler {
       infowindow.open(this.map, this.staticMarker);
     });
 
-    // Initialize inputs with static marker coordinates
+   
     this.updateInputs(staticLatLng.lat, staticLatLng.lng);
 
-    // Initialize map click listener
+     
     this.map.addListener("click", (e) => this.handleMapClick(e.latLng));
 
-    // Initialize search box
+     
     this.initSearch();
 
-    // Initialize update button click listener
+     
     document.getElementById(this.updateButtonId).addEventListener('click', () => this.updateMarkerFromInputs());
   }
 
   handleMapClick(latLng) {
     if (this.isStaticMarkerVisible) {
-      this.staticMarker.setMap(null); // Hide the static marker
-      this.isStaticMarkerVisible = false; // Update the flag
+      this.staticMarker.setMap(null);  //hide static marker
+      this.isStaticMarkerVisible = false;  
     }
 
     this.clearMarkers();
@@ -121,7 +121,7 @@ class MapHandler {
 
         this.searchMarkers.push(marker);
 
-        // Update inputs with coordinates of the searched place
+        // Update inputs with coordinates  
         this.updateInputs(place.geometry.location.lat(), place.geometry.location.lng());
 
         if (place.geometry.viewport) {
